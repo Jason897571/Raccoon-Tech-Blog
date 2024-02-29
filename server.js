@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const sequelize = require('./config/connection');
+const sequelize = require('./config/connection.js');
 
 const hbs = exphbs.create({});
 
@@ -16,10 +16,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require('./controllers/'));
+//app.use(require('./controllers/'));
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening http://localhost:3001'));
 });
 
 
