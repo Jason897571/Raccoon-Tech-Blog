@@ -1,0 +1,42 @@
+:root{
+    --nav-bg-color: rgb(77, 48, 26);
+    --main-bg-color: rgb(185, 213, 183);
+}
+
+
+
+nav{
+    background-color: var(--nav-bg-color);
+}
+
+#navbarNav{
+    padding-left: 50px;
+}
+
+.header{
+    background-color: var(--nav-bg-color);
+    
+}
+
+.nav-link{
+    color: var(--main-bg-color);
+    font-size: 20px;
+    
+}
+
+
+.header-container{
+    padding: 20px;
+}
+
+.title{
+    color:var(--nav-bg-color);
+    background-color: var(--main-bg-color);
+    display: inline-block;
+    margin-left: 50px;
+    border-radius: 20px;
+    padding:10px 20px;
+    box-shadow: 10px 10px 10px gray;
+    font-weight: bold;
+    
+}
