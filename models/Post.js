@@ -1,11 +1,11 @@
 const {Model, DataTypes} = require('sequelize');
-const sequelize = require('./config/connection');
+const sequelize = require('../config/connection.js');
 
 class Post extends Model {};
 
 Post.init({
     post_id: {
-        type: DataTypes.INT,
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
@@ -23,16 +23,19 @@ Post.init({
         }
     },
     created_date:{
-        type: DataTypes.DATETIME,
+        type: DataTypes.DATE,
         allowNull: false,
         defaultValue: DataTypes.NOW
     },
+    
+
+},
+{
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'post',
-
 });
 
 module.exports = Post;
