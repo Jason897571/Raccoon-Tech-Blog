@@ -13,6 +13,11 @@ nav{
     padding-left: 50px;
 }
 
+.nav-item{
+    margin-right: 50px;
+}
+    
+
 .header{
     background-color: var(--nav-bg-color);
     
@@ -40,3 +45,22 @@ nav{
     font-weight: bold;
     
 }
+
+.blog{
+    background-color: var(--main-bg-color);
+}
+
+
+/* login page */
+.login-card{
+    margin-top: 50px;
+    border: 3px solid black;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px gray;
+    background-color: var(--main-bg-color);
+    border-radius: 1rem;
+}
+
