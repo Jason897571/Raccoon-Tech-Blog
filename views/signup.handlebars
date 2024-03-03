@@ -4,19 +4,19 @@
             <div class="col col-xl-10">
                 <div class="card login-card">
                     <div class="card-body p-4 p-lg-5 text-black">
-                        <form>
+                        <form class="signup-form">
                             <h5 class="fw-normal mb-3 pb-3">Sign Up</h5>
                             <div class="form-outline mb-4">
-                                <input type="email" id="form2Example17" class="form-control form-control-lg" />
-                                <label class="form-label" for="form2Example17">User Name</label>
+                                <input type="user-name" id="user-name-signup" class="form-control form-control-lg" />
+                                <label class="form-label" for="user-name-signup">User Name</label>
                             </div>
                             <div class="form-outline mb-4">
-                                <input type="password" id="form2Example27" class="form-control form-control-lg" />
-                                <label class="form-label" for="form2Example27">Password</label>
+                                <input type="password" id="password-signup" class="form-control form-control-lg" />
+                                <label class="form-label" for="password-signup">Password</label>
                             </div>
                             <div class="pt-1 mb-4">
-                                <button class="btn btn-dark btn-lg btn-block" type="button">Sign Up</button>
-                                <button class="btn btn-dark btn-lg btn-block" type="button">Already have an account? Login!</button>
+                                <button class="btn btn-dark btn-lg btn-block" type="submit">Sign Up</button>
+                                <button class="btn btn-dark btn-lg btn-block" type="button" onclick="window.location.href='/login';">Already have an account? Login!</button>
                             </div>
                         </form>
                     </div>
@@ -25,3 +25,5 @@
         </div>
     </div>
 </section>
+
+<script src="/js/signup.js"></script>
