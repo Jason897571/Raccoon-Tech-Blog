@@ -5,20 +5,19 @@ const bcrypt = require('bcrypt');
 
 router.post('/login', async (req, res) => {
 
-    console.log(req.body);
-
     try{
         const userData = await User.findOne({
             where:{user_name: req.body.username}
         })
 
-        console.log(userData);
     
         if(!userData){
             res.status(400).json({message: 'Incorrect username or password, please try again'});
             return;
         }
-    
+        
+        console.log(req.body.password)
+
         const validPassword = await userData.checkPassword(req.body.password);
 
         console.log(validPassword);
@@ -45,11 +44,10 @@ router.post('/login', async (req, res) => {
 
 router.post("/signup",async (req,res)=>{
     const password = req.body.password;
-    const hashed_password = await bcrypt.hash(password, 10);
     try{
-            const userData = await User.create({
+            await User.create({
                 user_name: req.body.username,
-                password:hashed_password
+                password:password
             })
             res.status(200).json({"message":"user created","user_name":req.body.username,"password":req.body.password});
         }
