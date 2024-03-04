@@ -90,13 +90,13 @@ nav{
 
 
 .card{
-    border: 3px solid black;
     margin-top: 20px;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px gray;
-    background-color: var(--main-bg-color);
-    border-radius: 1rem;
+    background-color: gray;
+}
+
+.card:hover{
+    background-color: lightgreen;
+    cursor: pointer;
 }
 
 .card-body{
