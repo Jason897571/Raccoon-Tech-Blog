@@ -16,7 +16,6 @@ router.post('/login', async (req, res) => {
             return;
         }
         
-        console.log(req.body.password)
 
         const validPassword = await userData.checkPassword(req.body.password);
 
@@ -25,11 +24,11 @@ router.post('/login', async (req, res) => {
             res.status(400).json({message: 'Incorrect username or password, please try again'});
         
             return;
-        };
+        }
         
             
         req.session.save(() => {
-            req.session.user_id = userData.id;
+            req.session.user_id = userData.dataValues.user_id;
             req.session.logged_in = true;
     
             res.json({ user: userData, message: 'You are now logged in!' });

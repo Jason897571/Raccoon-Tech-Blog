@@ -1,25 +1,28 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-      <div class="card">
-        <div class="card-header bg-primary text-white">
+      <div class="card new-post-container">
+        <div class="card-header new-post-header">
           Create New Post
         </div>
         <div class="card-body">
-          <form>
+          <form class="new-post-form">
             <div class="form-group">
               <label for="title">Title</label>
-              <input type="text" class="form-control" id="title" placeholder="Object-Relational Mapping">
+              <input type="text" class="form-control" id="title" placeholder="Title">
             </div>
             <div class="form-group">
               <label for="content">Content</label>
-              <textarea class="form-control" id="content" rows="3" placeholder="I have really loved learning about ORMs. It's really simplified the way I create queries!"></textarea>
+              <textarea class="form-control" id="content" rows="3" placeholder="Content"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button id="create-btn" type="submit" class="btn btn-secondary btn-block mt-3">Create</button>
           </form>
         </div>
       </div>
-      <button class="btn btn-secondary btn-block mt-3">+ New Post</button>
+      <button class="btn btn-primary btn-lg new-post-btn">+ New Post</button>
+      
     </div>
   </div>
 </div>
+
+<script src="/js/dashboard.js"></script>

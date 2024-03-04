@@ -2,8 +2,13 @@
     --nav-bg-color: rgb(77, 48, 26);
     --main-bg-color: rgb(185, 213, 183);
 }
+.hide{
+    display: none;
+}
 
-
+body{
+    background-color: var(--main-bg-color);
+}
 
 nav{
     background-color: var(--nav-bg-color);
@@ -69,4 +74,16 @@ nav{
 .new-post-btn{
    
     align-self: flex-end;
+}
+
+.new-post-header{
+    background-color: var(--nav-bg-color);
+    color: var(--main-bg-color);
+    
+    
+}
+
+.new-post-container{
+    background-color: var(--main-bg-color);
+    border: 3px solid black;
 }

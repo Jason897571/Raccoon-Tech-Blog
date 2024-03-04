@@ -32,7 +32,7 @@ router.get('/signup', async(req, res) => {
   res.render('signup');
 })
 
-router.get('/dashboard', async(req, res) => {
+router.get('/dashboard', withAuth, async(req, res) => {
   res.render('dashboard');
 })
 
