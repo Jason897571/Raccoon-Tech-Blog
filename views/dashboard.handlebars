@@ -1,25 +1,49 @@
-<div class="container mt-5 all-post">
-  <!-- Card for MVC topic -->
-
-  {{#each posts as |post|}}
-  <div class="card" post_id={{post.post_id}}>
+<div class="container mt-5 edit-window hide">
+  <div class="card">
     <div class="card-header">
-      <div class="row">
-        <div class="col-6">
-          <h5 class="mb-0">{{post.title}}</h5>
+      Edit Post
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="postTitle" class="form-label"></label>
+          <input type="text" class="form-control" id="postTitle" placeholder="Object-Relational Mapping">
         </div>
-        <div class="col-6 text-right">
-          <small>Created on 5/8/2020</small>
+        <div class="mb-3">
+          <label for="postContent" class="form-label">Content</label>
+          <textarea class="form-control" id="postContent" rows="3"></textarea>
         </div>
-      </div>
+        <button id="update-post" type="submit" class="btn btn-primary">Update Post</button>
+        <button id="delete-post" type="submit" class="btn btn-danger">Delete</button>
+      </form>
     </div>
   </div>
-  {{/each}}
-
 </div>
 
 
-<div class="container mt-5">
+
+<ul class="container mt-5 all-post-holder">
+  <!-- Card for MVC topic -->
+
+  {{#each posts as |post|}}
+  
+  <li class="card post-card" post_id="{{post.post_id}}" title="{{post.title}}" content="{{post.contents}}">
+    <div class="row">
+      <div class="col-6">
+        <h5 class="mb-0">{{post.title}}</h5>
+      </div>
+      <div class="col-6 text-right">
+        <small>Created on 5/8/2020</small>
+      </div>
+    </div>
+  </li>
+
+  {{/each}}
+
+</ul>
+
+
+<div class="container mt-5 create-window">
   <div class="row">
     <div class="col-md-8 offset-md-2">
       <div class="card new-post-container hide">
@@ -45,5 +69,9 @@
     </div>
   </div>
 </div>
+
+
+
+
 
 <script src="/js/dashboard.js"></script>

@@ -89,12 +89,16 @@ nav{
 }
 
 
-.card{
+.post-card{
     margin-top: 20px;
     background-color: gray;
+    height: 50px;
+    padding: 10px;
+
+    
 }
 
-.card:hover{
+.post-card:hover{
     background-color: lightgreen;
     cursor: pointer;
 }
@@ -104,4 +108,10 @@ nav{
     color:black;
     font-weight: bold;
 
+}
+
+.card-header{
+    background-color: var(--nav-bg-color);
+    color: var(--main-bg-color);
+    font-weight: bold;
 }
