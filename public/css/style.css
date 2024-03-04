@@ -64,3 +64,9 @@ nav{
     border-radius: 1rem;
 }
 
+
+/* dashboard */
+.new-post-btn{
+   
+    align-self: flex-end;
+}

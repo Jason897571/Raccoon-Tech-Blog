@@ -10,8 +10,12 @@ Post.init({
         primaryKey: true,
         autoIncrement: true
     },
-    contents:{
-        type: DataTypes.STRING,
+    title:{
+        type: DataTypes.TEXT,
+        allowNull: false
+
+    },contents:{
+        type: DataTypes.TEXT,
         allowNull: false
 
     },
