@@ -23,3 +23,7 @@ const new_post_form_handler = async(event)=>{
 
 
 document.querySelector('.new-post-form').addEventListener('submit', new_post_form_handler);
+document.querySelector('.new-post-btn').addEventListener('click', ()=>{
+    document.querySelector('.new-post-container').classList.remove("hide");
+    document.querySelector('.all-post').classList.add("hide");
+});

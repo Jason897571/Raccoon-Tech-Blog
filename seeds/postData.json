@@ -1,0 +1,24 @@
+[
+    {
+        "post_id": 1,
+        "title": "Authentication vs. Authorization",
+        "contents": "Authentication is about verifying who you are, Authorization is about verifying what you can do.",
+        "user_id": 1
+
+    },
+    {
+        "post_id": 2,
+        "title": "Understanding Machine Learning Algorithms",
+        "contents": "Machine learning algorithms are the backbone of modern AI systems, enabling computers to learn from data and make decisions.",
+        "user_id": 2
+
+    },
+    {
+        "post_id": 3,
+        "title": "Introduction to Neural Networks",
+        "contents": "Neural networks are computational models inspired by the structure and function of the human brain.",
+        "user_id": 3
+
+    }
+   
+]

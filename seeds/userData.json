@@ -1,23 +1,23 @@
 [
     {
       "user_name": "Sal",
-      "password": "password12345"
+      "password": "$2b$10$j3eerijeRRsy1jwOZArKdO3E6GavlI/CZ.jFQJWRgqExeboDNgePe"
     },
     {
       "user_name": "Lernantino",
-      "password": "password12345"
+      "password": "$2b$10$j3eerijeRRsy1jwOZArKdO3E6GavlI/CZ.jFQJWRgqExeboDNgePe"
     },
     {
       "user_name": "Amiko",
-      "password": "password12345"
+      "password": "$2b$10$j3eerijeRRsy1jwOZArKdO3E6GavlI/CZ.jFQJWRgqExeboDNgePe"
     },
     {
       "user_name": "Jordan",
-      "password": "password12345"
+      "password": "$2b$10$j3eerijeRRsy1jwOZArKdO3E6GavlI/CZ.jFQJWRgqExeboDNgePe"
     },
     {
       "user_name": "Blake",
-      "password": "password12345"
+      "password": "$2b$10$j3eerijeRRsy1jwOZArKdO3E6GavlI/CZ.jFQJWRgqExeboDNgePe"
     }
 ]
   

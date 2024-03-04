@@ -1,0 +1,20 @@
+<div class="container mt-5 all-post">
+  <!-- Card -->
+  {{#each posts as |post|}}
+   <div class="card">
+    <div class="card-header bg-warning">
+      <div class="row">
+        <div class="col-6">
+          <h5 class="mb-0">{{post.title}}</h5>
+        </div>
+        <div class="col-6 text-right">
+          <small>Posted by Xandromus on 5/8/2020</small>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{post.contents}}</p>
+    </div>
+  </div>
+  {{/each}}
+</div>

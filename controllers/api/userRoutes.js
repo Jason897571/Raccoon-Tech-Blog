@@ -16,10 +16,10 @@ router.post('/login', async (req, res) => {
             return;
         }
         
-
+        /* Check if the password is correct */
         const validPassword = await userData.checkPassword(req.body.password);
 
-        console.log(validPassword);
+  
         if(!validPassword){
             res.status(400).json({message: 'Incorrect username or password, please try again'});
         
@@ -55,6 +55,18 @@ router.post("/signup",async (req,res)=>{
         }
     
 })
+
+
+router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+      // Remove the session variables
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
 
 
 module.exports = router;

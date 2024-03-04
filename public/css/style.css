@@ -87,3 +87,21 @@ nav{
     background-color: var(--main-bg-color);
     border: 3px solid black;
 }
+
+
+.card{
+    border: 3px solid black;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px gray;
+    background-color: var(--main-bg-color);
+    border-radius: 1rem;
+}
+
+.card-body{
+    background-color: var(--main-bg-color);
+    color:black;
+    font-weight: bold;
+
+}

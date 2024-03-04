@@ -5,15 +5,16 @@ const withAuth = require('../utils/auth');
 // main page router
 router.get('/', async (req, res) => {
   try {
-    //TODO get post data here and render
-/*     const post_info = await Post.findAll({
-      attributes:{include:[User]}
+    //get post data here and render
+    const post_info = await Post.findAll({
+      include: [{model: User}],
     })
+  
 
-    console.log(post_info) */
+    const posts = post_info.map(post => post.get({ plain: true }));
 
     res.render('homepage',{
-      logged_in: req.session.logged_in,
+      posts,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -33,7 +34,23 @@ router.get('/signup', async(req, res) => {
 })
 
 router.get('/dashboard', withAuth, async(req, res) => {
-  res.render('dashboard');
+  
+  try{
+    const post_info = await Post.findAll({
+      include: [{model: User}],
+      where:{user_id: req.session.user_id}
+    })
+  
+
+    const posts = post_info.map(post => post.get({ plain: true }));
+
+  
+    res.render('dashboard',{posts});
+  }
+  catch(err){
+    res.status(500).json({ message: 'Error fetching posts' });
+  }
+  
 })
 
 module.exports = router;

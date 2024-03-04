@@ -18,7 +18,7 @@ Comment.init({
         }
 
     },
-    creator_id:{
+    user_id:{
         type: DataTypes.INTEGER,
         references:{
             model:'user',
