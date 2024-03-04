@@ -77,3 +77,26 @@ document.querySelector('#update-post').addEventListener('click', async (event)=>
     }
     
 })
+
+
+// delete post 
+document.querySelector('#delete-post').addEventListener('click', async (event)=>{
+    event.preventDefault();
+
+    const post_id = document.querySelector('.edit-window').getAttribute('post_id');
+
+
+
+    const response = await fetch('/api/post/delete', {
+        method: 'DELETE',
+        body: JSON.stringify({ post_id}),
+        headers: { 'Content-Type': 'application/json' },
+    })
+
+    if (response.ok){
+        document.location.replace('/dashboard');
+    }else{
+        alert("Failed to DELETE");
+    }
+    
+})

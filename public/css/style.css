@@ -114,4 +114,15 @@ nav{
     background-color: var(--nav-bg-color);
     color: var(--main-bg-color);
     font-weight: bold;
+   
+}
+
+.home-post{
+    margin-top: 40px;
+    border: 2px solid black;
+}
+
+.home-post:hover{
+    box-shadow: 0 0 8px darkgreen;
+    cursor: pointer;
 }
