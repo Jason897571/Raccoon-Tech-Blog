@@ -10,11 +10,18 @@ const login_form_handler = async(event)=>{
         })
 
         if (response.ok){
+            localStorage.setItem('loggedIn', true);
             document.location.replace('/');
+
         }else{
             alert("Failed to login");
         }
     }
 }
 
+
 document.querySelector('.login-form').addEventListener('submit', login_form_handler);
+
+
+
+

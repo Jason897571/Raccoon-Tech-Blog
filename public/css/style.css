@@ -126,3 +126,13 @@ nav{
     box-shadow: 0 0 8px darkgreen;
     cursor: pointer;
 }
+
+.comment-header{
+    background-color: lightcoral;
+}
+
+.new-post-btn{
+    display:block;
+    margin:0 auto;
+    margin-top:50px;
+}
