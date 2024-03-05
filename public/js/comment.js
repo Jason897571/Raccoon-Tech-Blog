@@ -1,4 +1,10 @@
+// show the page to add comments
 document.querySelector('.all-post-holder').addEventListener('click', async (event)=>{
+
+    if(localStorage.getItem('loggedIn')){
+        document.location.replace('/login');
+        return
+    }
 
     let postCard = event.target.closest('.home-post');
 
@@ -9,7 +15,7 @@ document.querySelector('.all-post-holder').addEventListener('click', async (even
 
         // hide other post
         document.querySelectorAll('.all-post-holder > *').forEach(child => {
-            // Check if the child has an attribute post_id and it is not equal to '1'
+            // Check if the child has an attribute post_id and it is not equal to the selected post
             if(child.getAttribute('post_id') !== post_id) {
                 // Hide the element by adding a 'hide' class
                 child.classList.add('hide');
@@ -23,6 +29,8 @@ document.querySelector('.all-post-holder').addEventListener('click', async (even
     
 });
 
+
+// submit comments to the server
 document.querySelector('.comment-form').addEventListener('submit', async (event)=>{
     event.preventDefault();
 

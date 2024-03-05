@@ -21,8 +21,6 @@ router.get('/', async (req, res) => {
 
     const posts = post_info.map(post => post.get({ plain: true }));
 
-    console.log(posts[0].comments)
-
     res.render('homepage',{
       posts,
     });
