@@ -87,9 +87,8 @@ You should have your shell ready for downloading this project. We use gitbash as
    ```sh
    git clone https://github.com/Jason897571/Raccoon-Tech-Blog.git
    ```
-3. Open the project using vs code and open your mysql terminal to import `source db/schemal.sql` and input `node seeds/seed.js` in your bash terminal. Then you will see three tables in your database.
 
-4. In your terminal, input `npm start` to start the server.
+3. In your terminal, input `npm start` to start the server.
 
 
 
@@ -101,71 +100,21 @@ You should have your shell ready for downloading this project. We use gitbash as
 <a id="usage"></a>
 ## Usage
 
-When you input `npm start` In your terminal to start the server, you could send request to server to search, create, update or delete data.
-
-
-### Get All Info
-
-You could use insomnia to send <strong>GET</strong> request to `http://localhost:3000/api/products` to get all products information.
-
-try `http://localhost:3000/api/categories` to see categories information
-
-try `http://localhost:3000/api/tags` to see tags information
-
-![alt text](./public/image/get_all_product.png)
-
-### Get Single Info
-
-You could use insomnia to send <strong>GET</strong> request to `http://localhost:3000/api/products/1` to get the product information with id `1`.
-
-try `http://localhost:3000/api/categories/1` to see categories information with id `1`
-
-try `http://localhost:3000/api/tags/1` to see tags information with id `1`
-
-![alt text](./public/image/get_single_info.png)
-
-
-### Create Info
-
-You could use insomnia to send <strong>POST</strong> request to `http://localhost:3000/api/products/1` to crate the product information with body info show below.
-
-try `http://localhost:3000/api/categories/1` to create categories information
-
-try `http://localhost:3000/api/tags/1` to create tags information
-
-![alt text](./public/image/create.png)
-
-### Update Info
-
-You could use insomnia to send <strong>PUT</strong> request to `http://localhost:3000/api/products/1` to update the product information with body info show below.
-
-try `http://localhost:3000/api/categories/1` to update categories information
-
-try `http://localhost:3000/api/tags/1` to update tags information
-
-![alt text](./public/image/update.png)
-
-### Delete Info
-
-You could use insomnia to send <strong>DELETE</strong> request to `http://localhost:3000/api/products/6` to delete the product information with id `6`.
-
-try `http://localhost:3000/api/categories/6` to delete categories information with id `6`
-
-try `http://localhost:3000/api/tags/6` to delete tags information with id `6`
-
-![alt text](./public/image/delete.png)
+When you input `npm start` In your terminal to start the server, you could send request to server to login, logout, create a post, comment on a post, get all posts, update a post or delete a post.
 
 
 
 
-For more details, please refer to the [Documentation](https://github.com/Jason897571/Raccoon-Tech-Blog) or [Video](https://drive.google.com/file/d/1M-gGJv8WTPyUfoR1LIr6bXMF6Er_WBt6/view?usp=sharing)
+
+
+For more details, please refer to the [Documentation](https://github.com/Jason897571/Raccoon-Tech-Blog) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <a id="future_additions"></a>
 ## Future Additions
-* Create front end to reflect back end data
+* set up user center to create user's profiles
 
 
 
