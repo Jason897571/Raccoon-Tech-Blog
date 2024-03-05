@@ -7,8 +7,16 @@ router.get('/', async (req, res) => {
   try {
     //get post data here and render
     const post_info = await Post.findAll({
-      include: [{model: User, model:Comment}],
-    })
+      include: [
+        {model: User}, 
+        {model:Comment,
+          include: [
+          {
+            model: User,
+          }
+        ]}
+      ],
+    });
   
 
     const posts = post_info.map(post => post.get({ plain: true }));
