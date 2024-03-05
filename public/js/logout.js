@@ -7,10 +7,9 @@ const logout = async () => {
   
     if (response.ok) {
       // If successfully logged out, redirect to the login page
+      localStorage.setItem('loggedIn', false);
       document.location.replace('/login');
 
-      document.querySelector('.login').classList.remove('hide');
-      document.querySelector('.logout').classList.add('hide');
     } else {
       alert(response.statusText);
     }
