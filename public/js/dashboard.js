@@ -31,11 +31,12 @@ document.querySelector('.new-post-btn').addEventListener('click', ()=>{
 //select my own post and edit
 document.querySelector('.all-post-holder').addEventListener('click', async (event)=>{
 
-    const post_id = event.target.getAttribute('post_id');
-    const post_title = event.target.getAttribute('title');
-    const post_content = event.target.getAttribute('content');
+    let postCard = event.target.closest('.post-card');
 
-    console.log(post_id,post_title,post_content)
+    const post_id = postCard.getAttribute('post_id');
+    const post_title = postCard.getAttribute('title');
+    const post_content = postCard.getAttribute('content');
+
 
     if(post_id){
         document.querySelector('.edit-window').classList.remove("hide");

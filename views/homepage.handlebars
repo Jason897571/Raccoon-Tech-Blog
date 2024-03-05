@@ -1,7 +1,7 @@
-<div class="container mt-5 all-post">
+<div class="container mt-5 all-post-holder">
   <!-- Card -->
   {{#each posts as |post|}}
-   <div class="card home-post">
+   <div class="card home-post" post_id="{{post.post_id}}">
     <div class="card-header">
       <div class="row">
         <div class="col-6">
@@ -18,3 +18,18 @@
   </div>
   {{/each}}
 </div>
+
+<div class="comment-holder hide">
+    <div class="container mt-5">
+    <div class="comment-section">
+        <h4>Comment</h4>
+        <form class="comment-form">
+            <div class="form-group">
+                <textarea class="form-control" id="comment" rows="3" placeholder="Write your comments"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+  </div>
+
+<script src="/js/comment.js"></script>

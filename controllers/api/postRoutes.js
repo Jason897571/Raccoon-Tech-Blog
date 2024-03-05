@@ -63,5 +63,22 @@ router.delete('/delete',async(req,res)=>{
 })
 
 
+router.post('/comment',async(req,res)=>{
+    
+    const { post_id, comment_text } = req.body;
+    const user_id = req.session.user_id;
+    
+
+    await Comment.create({
+        post_id: post_id,
+        comment_text:comment_text,
+        user_id:user_id
+
+    })
+    res.status(200).json({"message":"post created","post_id":post_id,"comment_text":comment_text});
+
+})
+
+
 
 module.exports = router;
