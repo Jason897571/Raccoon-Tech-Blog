@@ -1,9 +1,8 @@
 // show the page to add comments
 document.querySelector('.all-post-holder').addEventListener('click', async (event)=>{
-
-    if(localStorage.getItem('loggedIn')){
+    
+    if(!localStorage.getItem('loggedIn') || localStorage.getItem('loggedIn')=="false"){
         document.location.replace('/login');
-        return
     }
 
     let postCard = event.target.closest('.home-post');
